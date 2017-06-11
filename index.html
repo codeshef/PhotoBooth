@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="main.css">
+   </head>
+   <body>
+      <div class="m-content">
+        <center> <h1>PhotoBooth</h1></center>
+
+   
+            <!-- local video stream will be rendered to the video tag -->
+            <div class="photo-booth">
+           <video id="camera-stream" autoplay width="360" height="270"></video>
+            <!-- a copy of the stream will be made and css filters applied  -->
+            <canvas id="canvas" width="360" height="270"></canvas>
+            </div>
+         <div class="buttons">
+            <!-- call getUserMedia() to access webcam and give permission -->
+            <!-- take a snapshot from your webcam and render it to the canvas tag -->
+            <ul><button id="snapshot">Snap photo!</button></ul>
+            <!-- sort through the available css filters -->
+         
+         <div id="effects">
+        <ul><button data-effect="sepia(1)">Sepia</button>
+        <button data-effect="invert(1)">Invert</button>
+        <button data-effect="blur(3px)">Blur</button>
+        <button data-effect="grayscale(1)">Grayscale</button>
+         <button data-effect="brightness">Brightness</button>
+         <button data-effect="contrast">Contrast</button>
+         <button data-effect="hue">Hue</button>
+          <button data-effect="saturate">Saturate</button>
+        <button data-effect="">Normal</button></ul>
+        </div>
+
+         </div>
+      </div>
+
+      <div class="audio-container">
+      <audio id="gum-local" controls autoplay></audio>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>
